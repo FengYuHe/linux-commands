@@ -5,8 +5,10 @@
 ```sh
 ls [options] [dirname]
 ```
+显示当前目录时选项 `[dirname]` 不需要
+
 ## 文件显示颜色含义
-* 默认色(白色) 普通文件
+* 默认色 普通文件 
 * 绿色 可执行文件
 * 红色 压缩包
 * 蓝色 目录
@@ -14,7 +16,23 @@ ls [options] [dirname]
 * 青色 链接文件(快捷方式)
 * 黄色 设备
 
-## 参数
+## example
+使用命令：
+* `ls` 打印当前目录下文件
+* `ls -1` 每行只打印一个文件
+* `ls -a` 打印目录下所有文件，包括隐藏文件、 `. `和 `..`
+* `ls -a --color=none` 打印目录下所有文件，包括隐藏文件、 `. `和 `..`，同时不显示文件颜色
+* `ls -A` 打印目录下所有文件，包括隐藏文件，但不打印 `.` 和 `..`
+* `ls -A --color=none` 打印目录下所有文件，包括隐藏文件，但不打印 `.` 、 `..`和文件颜色
+* `ls -l` 详细列表打印文件，[权限] [连结] [所属者] [群组] [文件大小] [修改日期] [文件或目录名]
+* `ls -R` 递归列出子目录下的文件
+* `ls -F` 文件名后缀加上一个区别文件类型的字符
+* `ls -FR` 递归列出子目录下的文件且文件加后缀区别文件类型
+* `ls -lx` 按列排序显示(系统默认按行)
+
+![](http://i.imgur.com/en04QcT.gif)
+
+## 所有参数
 * `-1` (阿拉伯数字1)  每行只显示一个文件
 * `-a` , `--all`	  显示目录下所有文件，包括隐藏文件、 `. `和 `..` 
 * `-A` , `--almost-all`  显示目录下所有文件，包括隐藏文件，但不显示 `.` 和 `..`
@@ -49,7 +67,7 @@ ls [options] [dirname]
 * `-t` 以时间排序
 * `-T` , ` --tabsize=COLS` 设<tab>字符间隔宽度为COLS,预设为8
 * `-u` 根据上次存取时间排序
-* `-U` 不排序，根据项目的顺序排序
+* `-U` 不排序，显示项目的默认顺序
 * `-v` 以版本进行排序显示
 * `-w` , `--width=COLS` 假设画面的宽度为COLS取代当前值，即自定义显示屏幕宽度
 * `-x` 按列排序显示(系统默认按行)
@@ -59,17 +77,17 @@ ls [options] [dirname]
 * `--block-size=SIZE` 指定文件大小显示类别，“K”，“M”，“G”等，但是会向上取整
 * `--color[=WHEN]` 设置显示颜色，默认为 `always` 总是显示，可设置为 `never` 不显示， 或者 `auto` 自动显示
 * `--file-type` 与 `-F` 一样，除了不追加 `*`
-* `--format=WORD` 
-* `--full-time`
-* `--group-directories-first`
-* `--si`
-* `--dereference-command-line-symlink-to-dir`
-* `--hide=PATTERN`
-* `--indicator-style=WORD`
-* `--show-control-chars`
-* `--quoting-style=WORD`
-* `--sort=WORD`
-* `--time=WORD`
-* `--time-style=STYLE`
-* `--help`
-* `--version`
+* `--format=WORD` `horizontal` 和 `across` 等同于 `-X`，`commas` 等同于 `-m`，`long` 、 `single-column` 和 `verbose` 等同于 `-l`，`vertical` 等同于 `-C`
+* `--full-time` 与 `-l` 相似，完整的显示时间
+* `--group-directories-first` 在文件前分组目录。此选项可与 `--sort` 一起使用， 但是一旦使用 `--sort=none`  (-U)将禁用分组
+* `--si` 与 `-h` 类似，但是使用1000 为基底而非1024
+* `--dereference-command-line-symlink-to-dir` 跟随命令行列出的目录的符号链接
+* `--hide=PATTERN` 隐藏符合PATTERN 模式的项目，与 `-I` 相似(`-a` 或 `-A` 将覆盖此选项)
+* `--indicator-style=WORD` 指定在每个项目名称后加上指示符号方式：none (默认)，classify (-F)，file-type (-p) 
+* `--show-control-chars` 直接显示无法打印的字符 (这是默认方式，除非调用的程序名称是"ls"而且是在终端输出结果)
+* `--quoting-style=WORD` 使用指定的quoting 方式显示条目的名称： `literal` 、`locale` 、`shell` 、`shell-always` 、`c` 、`escape`
+* `--sort=WORD` `node` 相当于 `-U`，`extension` 相当于 `-X`，`size` 相当于 `-S`，`time` 相当于 `-t` ， `version` 相当于 `-V`
+* `--time=WORD` 与 `-l` 配合使用，`atime` 、`access` 、`use` 相当于 `-u` ，`ctime` 、 `status` 相当于 `-c` 
+* `--time-style=STYLE` 和 `-l` 同时使用时根据 `STYLE` 代表的格式显示时间，`STYLE` 有 `full-iso`, `long-iso`, `iso`, `locale`, `+FORMAT`
+* `--help` 显示此帮助信息并退出
+* `--version` 显示版本信息并退出
