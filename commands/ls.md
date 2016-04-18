@@ -1,7 +1,7 @@
 # ls
 列出目录下的子目录和文件
 
-## 格式
+## Usage
 ```sh
 ls [options] [dirname]
 ```
@@ -16,7 +16,7 @@ ls [options] [dirname]
 * 青色 链接文件(快捷方式)
 * 黄色 设备
 
-## example
+## examples
 使用命令：
 * `ls` 打印当前目录下文件
 * `ls -1` 每行只打印一个文件
@@ -54,15 +54,15 @@ ls [options] [dirname]
 * `-l` 详细列表显示文件，[权限] [连结] [所属者] [群组] [文件大小] [修改日期] [文件或目录名]
 * `-L` , `--dereference` 当显示符号链接的文件信息时，显示符号链接所指示的对象而并非符号链接本身的信息
 * `-m` 以逗号来分隔文件
-* `-n` , `--numeric-uid-gid` 文件名所属者和群组以编号形式显示
+* `-n` , `--numeric-uid-gid` 类似 -l，但列出UID 及GID 号
 * `-N` , `literal` 按文件整体显示，不限制文件长度
 * `-o` 显示文件除群组外的详细信息，类似 `-l`
 * `-p` , `--indicator-style=slash` 与 `-F` 一样
 * `-q` , `--hide-control-chars` 用?代替不可显示的字符
 * `-Q` , `--quoting-style=WORD` 文件名以双引号括起来的形式显示
-* `-r` , `--reverse` 倒序显示
+* `-r` , `--reverse` 逆序排列
 * `-R` , `--recursive` 递归列出子目录下的文件
-* `-s` , `--size` 以块的形式显示每个文件的大小分配
+* `-s` , `--size` 以块数形式显示每个文件分配的尺寸
 * `-S` 以文件大小排序
 * `-t` 以时间排序
 * `-T` , ` --tabsize=COLS` 设<tab>字符间隔宽度为COLS,预设为8
