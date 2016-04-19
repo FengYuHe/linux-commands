@@ -19,7 +19,7 @@ mkdir [options] [dirname]
 ## 所有参数
 * `-m` ， `--mode=MODE` 创建目录且设定权限，权限值为三个数字组成(具体看[权限简单叙述](#power))
 * `-p` ， `--parents` 递归向下创建多层目录，即可直接创建 `a/b/c` 三个目录
-* `-v` ， `--verbose` 创建目录是打印提示信息
+* `-v` ， `--verbose` 创建目录时打印提示信息
 * `-Z` ， `--context=CTX` 创建目录时设置 `SELinux`(Security-Enhanced Linux)
 * `--help` 显示此帮助信息并退出
 * `--version` 显示版本信息并退出
