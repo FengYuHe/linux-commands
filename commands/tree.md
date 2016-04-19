@@ -87,5 +87,5 @@ sudo apt-get install tree
 * `--nolinks` 与 `-H` 配合使用，关闭文件的超链接显示
 
 ### 其他选项
-* `--version` 显示此帮助信息并退出
-* `--help` 显示版本信息并退出
+* `--version` 显示版本信息并退出
+* `--help` 显示此帮助信息并退出
