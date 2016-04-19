@@ -6,3 +6,4 @@
 * [`tree`](commands/tree.md) 以树状图列出目录下的子目录和文件
 * [`pwd`](commands/pwd.md) 显示目前所在的工作目录
 * [`cd`](commands/cd.md) 变更工作目录
+* [`mkdir`](commands/mkdir.md) 创建一个新的目录
