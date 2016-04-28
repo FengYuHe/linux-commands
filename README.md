@@ -9,3 +9,4 @@
 * [`mkdir`](commands/mkdir.md) 创建一个新的目录
 * [`rmdir`](commands/rmdir.md) 删除一个空的目录
 * [`touch`](commands/touch.md) 修改时间或创建一个空文件
+* [`rm`](commands/rm.md) 修改时间或创建一个空文件
